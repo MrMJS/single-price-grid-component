@@ -1,62 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Single Price Grid Component</title>
 
-<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-<title>Frontend Mentor | Single Price Grid Component</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 
-<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-<style>
-.attribution {
-	font-size: 11px;
-	text-align: center;
-}
-.attribution a {
-	color: hsl(228, 45%, 44%);
-}
-</style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
-<link href="css/modern-reset.css" rel="stylesheet" type="text/css">
-<link href="css/styles.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-<div class="container">
-    <div class="shadow">
-        <main>
-            <h1 class="headline fs-4">Join our community</h1>
-            <p class="yellow fs-3 my-2">30-day, hassle-free money back guarantee</p>
-            <p class="medium-gray">Gain access to our full library of tutorials along with expert code reviews. 
-                Perfect for any developers who are serious about honing their skills.</p>
-        </main>
-        <aside class="even-columns">
-            <section class="section--one">
-                <h2 class="sub-headline fs-3">Monthly Subscription</h2>
-				<p class="gray100 d-inline-flex"><span class="fs-2">&dollar;29</span> <span class="text-opacity--6 fs-small ">per month</span></p>
-                <p class="gray100 mb-5 text-opacity--8">Full access for less than &dollar;1 a day</p>
-                <a href="#" class="button">Sign Up</a></section>
-            <section class="section--two">
-                <h2 class="sub-headline fs-3">Why Us</h2>
-                <ul class="ps-0 gray100 text-opacity--6 fs-small list-style--none">
-                    <li>Tutorials by industry experts</li>
-                    <li>Peer &amp; expert code review</li>
-                    <li>Coding exercises</li>
-                    <li>Access to our GitHub repos</li>
-                    <li>Community forum</li>
-                    <li>Flashcard decks</li>
-                    <li>New videos every week</li>
-                </ul>
-            </section>
-        </aside>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <style>
+      :root {
+        --bg-blue-light: #678099;
+        --bg-blue-dark: #445566;
+        --bg-red-dark: #66504f;
+      }
+
+      body {
+        background-color: var(--bs-gray-300);
+      }
+      /* Background Colors */
+      .bg-blue-light {
+        background-color: var(--bg-blue-light);
+      }
+      .bg-blue-dark {
+        background-color: var(--bg-blue-dark);
+      }
+      .bg-red-dark {
+        background-color: var(--bg-red-dark);
+      }
+
+      /* Color */
+      .text-light-blue {
+        color: var(--bg-blue-light);
+      }
+      .text-dark-blue {
+        color: var(--bg-dark-light);
+      }
+      .text-red-dark {
+        color: var(--bg-red-dark);
+      }
+
+      .btn-red-dark:hover {
+        background-color: var(--bg-red-dark) !important;
+        color: white;
+      }
+      .btn-red-dark {
+        background-color: var(--bg-blue-light) !important;
+        color: white !important;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body
+    class="d-sm-flex justify-content-center align-items-ceneter vh-100 flex-column p-3"
+  >
+    <div class="container" style="max-width: 768px">
+      <main class="mb-4 shadow">
+        <div class="row bg-light p-5">
+          <p class="h4 text-light-blue fw-bold">
+            <i class="bi bi-people"></i> Join our community
+          </p>
+          <p class="h5 text-red-dark">
+            30-day, hassle-free money back guarantee
+          </p>
+          <p class="text-muted">
+            Gain access to our full library of tutorials along with expert code
+            reviews. Perfect for any developers who are serious about honing
+            their skills.
+          </p>
+        </div>
+
+        <div class="row d-flex shadow-lg">
+          <aside class="col-md-6 bg-blue-dark p-5 order-2 order-md-1">
+            <p class="h4 text-light">
+              <i class="bi bi-calendar-check me-1"></i> Monthly Subscription
+            </p>
+
+            <div class="d-flex align-items-center">
+              <p class="text-white h2 me-2">&dollar;29</p>
+              <p class="text-white text-opacity-75">per month</p>
+            </div>
+
+            <p class="text-white text-opacity-75">
+              Full access for less than &dollar;1 a day
+            </p>
+
+            <div class="d-grid">
+              <button
+                type="button"
+                class="btn btn-red-dark mt-3 border-3 border-light border-opacity-50"
+              >
+                Sign Up
+              </button>
+            </div>
+          </aside>
+
+          <aside class="col-md-6 bg-blue-light p-5 order-1 order-md-2">
+            <p class="h4 text-light">
+              <i class="bi bi-question-circle me-1"></i> Why Us
+            </p>
+
+            <ul class="list-unstyled ps-0 text-white text-opacity-75">
+              <li class="list-item">Tutorials by industry experts</li>
+              <li class="list-item">Peer &amp; expert code review</li>
+              <li class="list-item">Coding exercises</li>
+              <li class="list-item">Access to our GitHub repos</li>
+              <li class="list-item">Community forum</li>
+              <li class="list-item">Flashcard decks</li>
+              <li class="list-item">New videos every week</li>
+            </ul>
+          </aside>
+        </div>
+      </main>
+      <footer>
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="https://warehouse827.com">Warehouse 827</a>.
+        </p>
+      </footer>
     </div>
-    <footer>
-        <p class="attribution"> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-            Coded by <a href="https://www.frontendmentor.io/profile/MrMJS" title="https://www.frontendmentor.io/profile/warehouse827">Warehouse 827</a>. </p>
-    </footer>
-</div>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
