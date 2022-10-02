@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/warehouse827/single-price-grid-component.git]
-- Live Site URL: [https://warehouse827.github.io/Testimonials-Grid-Section/]
+- Live Site URL: [https://warehouse827.github.io/single-price-grid-component/]
 
 ## My process
 
